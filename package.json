@@ -1,0 +1,31 @@
+{
+  "name": "applap",
+  "version": "1.0.0",
+  "description": "App Lap is a website I made to learn new things.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "compress:css": "node-sass src/css/style.comp.css src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamiKamal/appLap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamiKamal/appLap/issues"
+  },
+  "homepage": "https://github.com/SamiKamal/appLap#readme",
+  "dependencies": {},
+    "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
