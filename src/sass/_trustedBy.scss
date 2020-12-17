@@ -1,0 +1,23 @@
+.trustedBy{
+    grid-column: 2/10;
+    grid-row: 2/3;
+
+    display: flex;
+    justify-content: center;
+    padding: 8em;
+
+    &__container{
+        width: 100%;
+    }
+    
+    .paragraph{
+        text-align: center;
+        color: $color-grey-dark-1;
+    }
+
+    &__imgBox{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

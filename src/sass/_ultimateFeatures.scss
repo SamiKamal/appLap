@@ -1,0 +1,68 @@
+.ultimateFeatures{
+    grid-column: 2/-1;
+    grid-row: 7/8;
+
+    display: grid;
+    grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+
+
+    &__container{
+        grid-column: 1/-1;
+        background-image: url('../img/ultimateFeaturesBackground.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+
+        i{
+            font-size: 6rem;
+        }
+        
+    }
+
+    .heading-2{
+        margin-bottom: .4em;
+    }
+
+    &__text{
+        max-width: 70%;
+        width: 100%;
+    }
+
+    &__textBox{
+        max-width: 50em;
+    }
+
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+        grid-gap: 5rem;
+        gap: 5rem;
+
+    }
+
+    &__imgBox{
+        width: 100%;
+        position: relative;
+        // background-image: url('../img/ultimateFeaturesBackground.png');
+        // background-position: top;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+    }
+
+    .img--front{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 99999;
+    }
+
+    .img--back{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20em;
+    }
+
+}

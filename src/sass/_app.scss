@@ -1,0 +1,24 @@
+.downloadApp{
+    grid-column: 2/-1;
+    grid-row: 11/12;
+
+    &__container{
+        display: flex;
+    }
+
+    &__downloadImg{
+        display: inline-block;
+        max-width: 185px;
+
+        &:not(:last-child){
+            margin-right: 3em;
+        }
+    }
+
+    &__imgBox{
+        z-index: 1;
+        img{
+            margin-bottom: -6.5em;
+        }
+    }
+}

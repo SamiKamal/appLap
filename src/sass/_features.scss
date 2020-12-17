@@ -1,0 +1,38 @@
+.features{
+    grid-column: 2/10;
+    grid-row: 3/4;
+
+    &__container{
+        display: flex;
+
+        .heading-2{
+            width: 10em;
+        }
+    }
+    
+    &__box--text{
+        .paragraph{
+            max-width: 30em;
+            margin-top: .5em;
+        }
+    
+    }
+
+    &__card{
+        display: flex;
+        max-width: 40em;
+    }
+    
+    &__imgBox{
+        background-image: url('../img/featuresBackground.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+    }
+    
+    i{
+        font-size: 6rem;
+    }
+
+    
+}

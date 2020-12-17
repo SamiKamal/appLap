@@ -1,0 +1,107 @@
+.testimonials{
+    grid-column: 1/-1;
+    grid-row: 9/10;
+
+    display: grid;
+    grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+
+    &__container{
+        grid-column: 1/14;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__text{
+        .heading-2{
+            max-width: 13em;
+        }
+
+        .paragraph{
+            max-width: 35em;
+        }
+    }
+
+    &__rating{
+        font-size: 3rem;
+        color: #ffcc00;
+        margin-bottom: .2em;
+    }
+
+    &__quoteBox{
+        .paragraph{
+            width: 35em;
+        }
+
+        .testimonials__person{
+
+            &Box{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &Info{
+                display: flex;
+            }
+
+            &Text{
+                align-self: center;
+            }
+
+            &Name{
+                font-size: 2.4rem;
+                font-weight: 600;
+            }
+
+            &Job{
+                font-size: 2rem;
+                font-weight: 500;
+                color: $color-grey-dark-2;
+            }
+
+        }
+
+    }
+
+    &__arrowsBox{
+        align-self: center;
+        position: relative;
+        
+
+
+        i{
+            font-size: 3rem;
+            color: $color-primary;
+            border: solid 2px #eff3f8;
+            padding: .3em;
+            border-radius: 50px;
+            background-color: #eff3f8;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .inactive{
+            color: #eff3f8;
+            background-color: transparent;
+        }
+
+        .ri-arrow-left-line{
+            margin-right: .5em;
+            
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: .9em;
+                position: absolute;
+                right: -.4em;
+                transform: translateX(-100%);
+                background-color: #e7e7e7;
+                cursor: initial;
+            }
+    
+        }
+        
+        
+    }
+}

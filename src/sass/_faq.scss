@@ -1,0 +1,103 @@
+.faq{
+    grid-column: 2/10;
+    grid-row: 10/11;
+
+    &__container{
+        padding: 15em 0;
+    }
+
+    &__text{
+        text-align: center;
+
+        p{
+            max-width: 40em;
+            margin: 0 auto;
+        }
+    }
+
+    &__content{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    &__card{
+        padding: 3em 5em;
+        background-color: $color-grey-light-2;
+        max-height: 10em;
+        overflow: hidden;
+        padding-bottom: 0;
+        transition: padding-bottom .8s cubic-bezier(.69,1.59,.8,.93);
+
+        &:not(:last-child){
+            margin-bottom: 1em;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        .answer{
+            display: block;
+            font-size: 2rem;
+            position: relative;
+            left: -50em;
+            color: $color-grey-dark-2;
+            font-weight: 500;
+            opacity: 0;
+            -webkit-user-select: none; /* Safari */        
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+
+          
+
+    
+        }
+    }
+
+    .activeFAQ{
+        // max-height: 100%;
+        padding-bottom: 23em;
+
+
+        .answer{
+            opacity: 1;
+            left: 0;
+            -webkit-user-select: initial; /* Safari */        
+            -moz-user-select: initial; /* Firefox */
+            -ms-user-select: initial; /* IE10+/Edge */
+            user-select: initial; /* Standard */
+
+            animation-name: focus-in-expand-top;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: none;
+
+
+    
+        }
+
+        &:hover{
+            cursor: initial;
+        }
+    }
+}
+
+@keyframes focus-in-expand-top {
+    0%{
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100%{
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
