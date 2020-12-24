@@ -21,8 +21,8 @@ $color-flavour-3: #40975f;
 $font-primary: 'Poppins', sans-serif;
 
 // MEDIA QUERIES
-$bp-largest: 75em; // 1200 px
-$bp-large: 62.5em; // 900 px
+$bp-largest: 87.5em; // 1400 px
+$bp-large: 62.5em; // 1000 px
 $bp-medium: 50em; // 800 px
 $bp-small: 37.5em; // 600 px
 
@@ -56,8 +56,12 @@ body{
 .container{
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8 , minmax(min-content,1fr)) minmax(6rem, 1fr);
-    grid-template-rows: 100vh minmax(min-content, 4rem) minmax(min-content, 10rem) minmax(min-content, 7rem) minmax(min-content, 6rem) repeat(3, minmax(min-content, 11rem)) minmax(min-content, 9rem) minmax(min-content, 10rem) minmax(min-content, 4.5rem) minmax(min-content, 5.5rem);
-    // column-gap: 3rem;
+    grid-template-rows: minmax(min-content, 100vh) minmax(min-content, 10rem) minmax(min-content, 10rem) minmax(min-content, 7rem) minmax(min-content, 6rem) repeat(3, minmax(min-content, 11rem)) minmax(min-content, 9rem) minmax(min-content, 10rem) minmax(min-content, 4.5rem) minmax(min-content, 5.5rem);
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: minmax(2rem, 1fr) repeat(8 , minmax(min-content,1fr)) minmax(2rem, 1fr);
+
+    }
 }
 
 .icon--box{
@@ -80,7 +84,7 @@ body{
     }
 
     .icon--box{
-        width: 80px; 
+        width: 8em; 
         margin-bottom: 2rem;
     }
 }
@@ -94,3 +98,21 @@ body{
 .greenBackground{background-color: #e4ffee;}
 .yellowBackground{background-color: #fff6d3;}
 .purpleBackground{background-color: #f4f4ff;}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+.errorShake{
+    animation: shake .6s cubic-bezier(.36, .07, .19, .97) both;
+}

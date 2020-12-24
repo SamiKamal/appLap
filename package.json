@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack serve",
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -22,10 +23,16 @@
     "url": "https://github.com/SamiKamal/appLap/issues"
   },
   "homepage": "https://github.com/SamiKamal/appLap#readme",
-  "dependencies": {},
-    "devDependencies": {
+  "dependencies": {
+    "locomotive-scroll": "^4.0.6"
+  },
+  "devDependencies": {
     "concat": "^1.0.3",
+    "i": "^0.3.6",
     "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

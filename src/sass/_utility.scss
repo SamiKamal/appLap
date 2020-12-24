@@ -1,4 +1,5 @@
 .btn{
+    display: inline-block;
     font-size: 2.2rem;
     font-weight: 700;
     color: white;
@@ -7,7 +8,36 @@
     padding: 1.7rem 4.5rem;
     padding: .8em 2.8em;
     border-radius: 50px;
-    display: inline-block;
+    box-shadow: 0 2px 8px -1px rgba($color-primary,0.32);
+    transition: transform .5s ease, box-shadow .5s ease;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+
+    &:after{
+        content: '';
+        width: 50px;
+        height: 195px;
+        background: rgba(255,255,255,0.2);
+        display: inline-block;
+        position: absolute;
+        top: -50px;
+        left: -100px;
+        transform: rotate(45deg);
+        // opacity: .49;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        z-index: 1;
+    }
+
+    &:hover{
+        box-shadow: 0 4px 20px -2px rgba($color-primary,0.5);
+        transform: translateY(-10px);
+
+        &:after{
+            left: 120%;
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
 }
 .mt-large-10{
     margin-top: 10rem;

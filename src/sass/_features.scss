@@ -1,13 +1,38 @@
 .features{
     grid-column: 2/10;
     grid-row: 3/4;
+    padding: 8em 0;
 
     &__container{
         display: flex;
+        justify-content: center;
 
         .heading-2{
-            width: 10em;
+            max-width: 10em;
         }
+    }
+
+    &__box{
+        @media only screen and (max-width: $bp-large){
+            padding-left: 0;
+            width: 100%;
+         }    
+ 
+    }
+
+    &__box--content{
+        @media only screen and (max-width: $bp-large){
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            grid-gap: 4rem;
+            gap: 4rem;    
+         }    
+
+         @media only screen and  (max-width: $bp-small) {
+            justify-items: center;
+        }
+
+ 
     }
     
     &__box--text{
@@ -21,13 +46,44 @@
     &__card{
         display: flex;
         max-width: 40em;
+
+        @media only screen and (max-width: $bp-large){
+            display: block;
+         }    
+
+         @media only screen and  (max-width: $bp-small) {
+            text-align: center;
+        }
+
+ 
+    }
+
+    &__icon--box{
+        @media only screen and (max-width: $bp-large){
+            max-width: 8em;
+         }     
+
+         @media only screen and  (max-width: $bp-small) {
+            margin: 0 auto;
+        }
+
     }
     
     &__imgBox{
+        align-self: center;
         background-image: url('../img/featuresBackground.png');
         background-repeat: no-repeat;
         background-position: left center;
         background-size: contain;
+
+        @media only screen and (max-width: $bp-large){
+           display: none;
+        }    
+
+
+        img{
+            max-width: 100%;
+        }
     }
     
     i{

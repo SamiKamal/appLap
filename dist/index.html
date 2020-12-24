@@ -6,20 +6,23 @@
     <title>App Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/locomotive-scroll.css">
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
+    <div class="container" data-scroll-container>
+        <header class="hero" data-scroll-section id="home">
+            <img src="../src/img/backroundParticles 2.png" alt="" class="parllaxBackgroundImage" data-scroll data-scroll-speed="1">
+            <img src="../src/img/backgroundParticles.png" alt="" class="parllaxBackgroundImage" data-scroll data-scroll-speed="7">
             <div class="hero__container">
                 <nav class="hero__nav mt-large-10">
                     <h1 class="logo"><span>App</span>Lab</h1>
                     <ul class="nav__ul">
-                        <li class="nav__li"><a href="#Home" class="nav__link">Home</a></li>
-                        <li class="nav__li"><a href="#keyFeatures" class="nav__link">Key Features</a></li>
-                        <li class="nav__li"><a href="#pricing" class="nav__link">Pricing</a></li>
-                        <li class="nav__li"><a href="#testimonials" class="nav__link">Testimonials</a></li>
-                        <li class="nav__li"><a href="#faq" class="nav__link">FAQ</a></li>
-                        <li class="nav__li"><a href="#" class="nav__btn btn btn-fill">Try for free</a></li>
+                        <li class="nav__li"><a href="#" id="toHome" class="nav__link">Home</a></li>
+                        <li class="nav__li"><a href="#" id="toFeatures" data-scroll-target='pricing' class="nav__link">Key Features</a></li>
+                        <li class="nav__li"><a href="#" id="toPricing" class="nav__link">Pricing</a></li>
+                        <li class="nav__li"><a href="#" id="toTesti" class="nav__link">Testimonials</a></li>
+                        <li class="nav__li"><a href="#" id="toFaq" class="nav__link">FAQ</a></li>
+                        <li class="nav__li"><a href="#" class="nav__btn btn btn-fill shakeOnClick">Try for free</a></li>
                     </ul>
                 </nav>
     
@@ -36,11 +39,11 @@
                             managing your personal budgets.
                         </h4>
                         <div class="hero__content--btnBox mt-small-5">
-                            <a href="#" class="btn btn-fill">Try for free</a>
-                            <a href="#" class="highlight ml-small-5">Watch demo video</a>
+                            <a href="#" class="btn btn-fill shakeOnClick">Try for free</a>
+                            <a href="#" class="highlight ml-small-5 shakeOnClick">Watch demo video</a>
                         </div>
                     </div>
-                    <div class="hero__content--imgBox">
+                    <div class="hero__content--imgBox" data-scroll data-scroll-speed="4">
                         <img class="hero__content--img" src="../src/img/phoneImage.png" alt="">
                     </div>
                 </div>
@@ -48,7 +51,7 @@
             </div>
         </header>
 
-        <div class="trustedBy pb-largest-20">
+        <div class="trustedBy pb-largest-20" data-scroll-section>
             <div class="trustedBy__container">
                 <p class="paragraph">Trusted by companies like</p>
                 <div class="trustedBy__imgBox mt-small-3">
@@ -61,9 +64,9 @@
             </div>
         </div>
 
-        <div class="features">
+        <div class="features" id="features" data-scroll-section>
             <div class="features__container">
-                <div class="features__imgBox">
+                <div class="features__imgBox" data-scroll data-scroll-speed="1">
                     <img src="../src/img/phoneFeatures.png" alt="Phone with text in it" class="features__img">
                 </div>
                 <div class="features__box pl-large-10">
@@ -74,7 +77,7 @@
                     </div>
                     <div class="features__box--content mt-small-5">
                         <div class="features__card mb-small-5">
-                            <div class="features__icon--box mr-small-3 pinkBackground icon--box">
+                            <div class="features__icon--box mr-small-3 pinkBackground icon--box" data-scroll data-scroll-speed=".3">
                                 <!-- <img src="https://s.svgbox.net/materialui.svg?ic=speed&fill=f55767" alt="speedometer icon" class="features__icon icon"> -->
                                 <i class="ri-speed-line pinkColor"></i>
                             </div>
@@ -89,7 +92,7 @@
                         </div>
 
                         <div class="features__card mb-small-5">
-                            <div class="features__icon--box mr-small-3 blueBackground icon--box">
+                            <div class="features__icon--box mr-small-3 blueBackground icon--box" data-scroll data-scroll-speed=".3">
                                 <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=puzzle&fill=2563ff" alt="speedometer icon" class="features__icon icon"> -->
                                 <i class="ri-projector-2-line blueColor"></i>
                             </div>
@@ -104,7 +107,7 @@
                         </div>
                         
                         <div class="features__card">
-                            <div class="features__icon--box mr-small-3 greenBackground icon--box">
+                            <div class="features__icon--box mr-small-3 greenBackground icon--box" data-scroll data-scroll-speed=".3">
                                 <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=view-grid-add&fill=40975f" alt="speedometer icon" class="features__icon icon"> -->
                                 <i class="ri-quill-pen-line greenColor"></i>
                             </div>
@@ -122,7 +125,7 @@
             </div>
         </div>
 
-        <div class="smartJackpot">
+        <div class="smartJackpot" data-scroll-section>
             <div class="smartJackpot__container">
                 <div class="smartJackpot__textContainer mb-large-10">
                     <div class="smartJackpot__mainText mr-large-10">
@@ -143,7 +146,7 @@
                 </div>
                 <div class="smartJackpot__contentContainer">
                     <div class="smartJackpot__card mr-large-10">
-                        <div class="smartJackpot__icon--box icon--box pinkBackground">
+                        <div class="smartJackpot__icon--box icon--box pinkBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=annotation&fill=f55767" alt="" class="icon smartJackpot__icon"> -->
                             <i class="ri-copper-coin-line pinkColor"></i>
                         </div>
@@ -154,7 +157,7 @@
                     </div>
 
                     <div class="smartJackpot__card mr-large-10">
-                        <div class="smartJackpot__icon--box icon--box blueBackground">
+                        <div class="smartJackpot__icon--box icon--box blueBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=adjustments&fill=2563ff" alt="" class="icon smartJackpot__icon"> -->
                             <i class="ri-equalizer-line blueColor"></i>
                         </div>
@@ -165,7 +168,7 @@
                     </div>
 
                     <div class="smartJackpot__card">
-                        <div class="smartJackpot__icon--box icon--box greenBackground">
+                        <div class="smartJackpot__icon--box icon--box greenBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=calculator&fill=40975f" alt="" class="icon smartJackpot__icon"> -->
                             <i class="ri-hand-coin-line greenColor"></i>
                         </div>
@@ -179,10 +182,10 @@
             </div>
         </div>
 
-        <div class="designedBy">
+        <div class="designedBy" data-scroll-section>
             <div class="designedBy__container">
-                <div class="designedBy__img--box mr-large-10">
-                    <img src="../src/img/desginedByBackground.png" alt="Man sitting on a computer" class="designedBy__img">
+                <div class="designedBy__img--box mr-large-10" data-scroll data-scroll-speed="1">
+                    <img src="../src/img/desginedByBackground.png" alt="Man sitting on a computer" class="designedBy__img" >
                 </div>
                 <div class="designedBy__text--box ml-small-3">
                     <h2 class="heading-2 mb-small-3">Designed & built by
@@ -191,12 +194,12 @@
                         <p class="paragraph mb-small-5">The rise of mobile devices transforms the way we
                             consume information entirely and the world's most
                             elevant channels such as Facebook.</p>
-                        <a href="#" class="btn btn-fill">Learn more</a>
+                        <a href="#" class="btn btn-fill shakeOnClick">Learn more</a>
                 </div>
             </div>
         </div>
 
-        <div class="whyOurApp">
+        <div class="whyOurApp" data-scroll-section>
             <div class="whyOurApp__container">
                 <div class="whyOurApp__text">
                     <h2 class="heading-2 mb-small-3">Why you should choose our app</h2>
@@ -207,7 +210,7 @@
                 </div>
                 <div class="whyOurApp__content pt-large-10">
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box pinkBackground">
+                        <div class="icon--box whyOurApp__icon--box pinkBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=chart-pie" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-apps-2-line"></i>
                         </div>
@@ -220,7 +223,7 @@
                     </div>
 
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box blueBackground">
+                        <div class="icon--box whyOurApp__icon--box blueBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=bookmark-alt" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-medal-2-line"></i>
                         </div>
@@ -233,7 +236,7 @@
                     </div>
 
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box yellowBackground">
+                        <div class="icon--box whyOurApp__icon--box yellowBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=cash" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-cloud-line"></i>
                         </div>
@@ -246,7 +249,7 @@
                     </div>
 
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box greenBackground">
+                        <div class="icon--box whyOurApp__icon--box greenBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=clipboard-check" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-settings-4-line"></i>
                         </div>
@@ -259,7 +262,7 @@
                     </div>
 
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box purpleBackground">
+                        <div class="icon--box whyOurApp__icon--box purpleBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=chip" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-capsule-line"></i>
                         </div>
@@ -272,7 +275,7 @@
                     </div>
 
                     <div class="whyOurApp__card card">
-                        <div class="icon--box whyOurApp__icon--box pinkBackground">
+                        <div class="icon--box whyOurApp__icon--box pinkBackground" data-scroll data-scroll-speed=".3">
                             <!-- <img src="https://s.svgbox.net/hero-outline.svg?ic=desktop-computer" alt="" class="icon whyOurApp__icon"> -->
                             <i class="ri-customer-service-2-line"></i>
                         </div>
@@ -287,7 +290,7 @@
             </div>
         </div>
 
-        <div class="ultimateFeatures">
+        <div class="ultimateFeatures" data-scroll-section>
             <div class="ultimateFeatures__container">
                 <div class="ultimateFeatures__text">
                     <div class="ultimateFeatures__textBox">
@@ -299,7 +302,7 @@
                     </div>
                     <div class="ultimateFeatures__content mt-small-5">
                         <div class="ultimateFeatures__card card">
-                            <div class="icon--box ultimateFeatures__icon--box pinkBackground">
+                            <div class="icon--box ultimateFeatures__icon--box pinkBackground" data-scroll data-scroll-speed=".3">
                             <i class="ri-apps-2-line"></i>
                             </div>
                             <div class="ultimateFeatures__card--text">
@@ -311,7 +314,7 @@
                         </div>
 
                         <div class="ultimateFeatures__card card">
-                            <div class="icon--box ultimateFeatures__icon--box greenBackground">
+                            <div class="icon--box ultimateFeatures__icon--box greenBackground" data-scroll data-scroll-speed=".3">
                                 <i class="ri-capsule-line"></i>
                             </div>
                             <div class="ultimateFeatures__card--text">
@@ -323,7 +326,7 @@
                         </div>
 
                         <div class="ultimateFeatures__card card">
-                            <div class="icon--box ultimateFeatures__icon--box yellowBackground">
+                            <div class="icon--box ultimateFeatures__icon--box yellowBackground" data-scroll data-scroll-speed=".3">
                                 <i class="ri-cloud-line"></i>
                             </div>
                             <div class="ultimateFeatures__card--text">
@@ -335,7 +338,7 @@
                         </div>
 
                         <div class="ultimateFeatures__card card">
-                            <div class="icon--box ultimateFeatures__icon--box purpleBackground">
+                            <div class="icon--box ultimateFeatures__icon--box purpleBackground" data-scroll data-scroll-speed=".3">
                                 <i class="ri-customer-service-2-line"></i>
                             </div>
                             <div class="ultimateFeatures__card--text">
@@ -346,18 +349,18 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-fill mt-small-5">See all</a>
+                    <a href="#" class="btn btn-fill mt-small-5 shakeOnClick">See all</a>
                 </div>
                 <div class="ultimateFeatures__imgBox">
                     <img src="../src/img/ultimateFeaturesPhone1.png" alt="" class="ultimateFeatures__img img--front">
-                    <img src="../src/img/ultimateFeaturesPhone2.png" alt="" class="ultimateFeatures__img img--back">
+                    <img src="../src/img/ultimateFeaturesPhone2.png" alt="" class="ultimateFeatures__img img--back" data-scroll data-scroll-call="imgBack">
                 </div>
             </div>
         </div>
 
-        <div class="plans">
+        <div class="plans" id="pricing" data-scroll-section>
             <div class="plans__container">
-                <div class="plans__text">
+                <div class="plans__text" data-scroll data-scroll-speed="1">
                     <h2 class="heading-2 mb-small-3">
                         Get awesome features, without extra charges
                     </h2>
@@ -368,7 +371,7 @@
                 </div>
                 <div class="plans__content mt-large-10">
                     <div class="plans__switchBox">
-                        <div class="plans__switch">
+                        <div class="plans__switch shakeOnClick">
                             <p class="paragraph active">Monthly</p>
                             <p class="paragraph">Annually</p>
                         </div>
@@ -376,20 +379,20 @@
                     <div class="plans__cardBox mt-large-10">
                         <div class="plans__card plans__card--important">
                             <div class="plans__card--upper">
-                                <p class="plans__card--price">$0</p> <span class="plans__card--date">/ month</span>
-                                <p class="plans__card--mainText">Business Class</p>
+                                <p class="plans__card--price" id="plans__card--price">$0</p> <span class="plans__card--date">/ month</span>
+                                <p class="plans__card--mainText" id="plans__card--mainText">Business Class</p>
                                 <span class="plans__card--subText">For small teams or office</span>
                             </div>
                             <div class="plans__card--bottom">
                                 <div class="plans__card--featuresBox">
-                                    <ul class="plans__card--features">
+                                    <ul class="plans__card--features" id="plans__card--features">
                                         <li>Drag & Drop Builder</li>
                                         <li>1,000's of Templates</li>
                                         <li>Blog Support Tools</li>
                                         <li>eCommerce Store</li>
                                     </ul>
                                 </div>
-                                <a href="#" class="btn btn-fill">Start free trail</a>
+                                <a href="#" class="btn btn-fill shakeOnClick" id="plans__card--button">Start free trail</a>
                             </div>
                         </div>
 
@@ -408,8 +411,8 @@
                                         <li>eCommerce Store</li>
                                     </ul>
                                 </div>
-                                <a href="#" class="btn btn-fill">Subscribe Now</a>
-                                <a href="#" class="highlight">Or Start 14 days trail</a>
+                                <a href="#" class="btn btn-fill shakeOnClick">Subscribe Now</a>
+                                <a href="#" class="highlight shakeOnClick">Or Start 14 days trail</a>
                             </div>
                         </div>
                     </div>
@@ -417,9 +420,9 @@
             </div>
         </div>
 
-        <div class="testimonials mt-large-10">
+        <div class="testimonials mt-large-10" id="testimonial" data-scroll-section>
             <div class="testimonials__container">
-                <div class="testimonials__imgBox"><img src="../src/img/testiBackground.png" alt=""></div>
+                <div class="testimonials__imgBox" data-scroll data-scroll-speed=".5"><img src="../src/img/testiBackground.png" alt=""></div>
                 <div class="testimonials__content">
                     <div class="testimonials__text">
                         <h2 class="heading-2 mb-small-3">Meet Client Satisfaction by using product</h2>
@@ -448,7 +451,7 @@
                                     <p class="testimonials__personJob">CEO of Pixler Lab</p>
                                 </div>
                             </div>
-                            <div class="testimonials__arrowsBox">
+                            <div class="testimonials__arrowsBox shakeOnClick">
                                 <i class="ri-arrow-left-line inactive"></i>        <i class="ri-arrow-right-line"></i>                     </div>
                         </div>
                     </div>
@@ -456,7 +459,7 @@
             </div>
         </div>
 
-        <div class="faq">
+        <div class="faq" id="faq" data-scroll-section>
             <div class="faq__container">
                 <div class="faq__text">
                     <h2 class="heading-2 mb-small-3">Frequently asked questions</h2>
@@ -512,15 +515,15 @@
             </div>
         </div>
 
-        <div class="downloadApp">
+        <div class="downloadApp" data-scroll-section>
             <div class="downloadApp__container">
                 <div class="downloadApp__text">
                     <h2 class="heading-2 mb-small-3">Download our App now !</h2>
                     <p class="paragraph">The rise of mobile devices transforms the way we consume information entirely
                         and the world's most elevant channels such as Facebook.</p>
-                    <div class="downloadApp__downloadImgBox mt-small-5">
-                        <img src="../src/img/downloadGoogle.png" alt="Download on Google Play Image" class="downloadApp__downloadImg">
-                        <img src="../src/img/downloadApple.png" alt="Download on Apple Image" class="downloadApp__downloadImg">
+                    <div class="downloadApp__downloadImgBox mt-small-5 shakeOnClick" data-scroll data-scroll-call="popUpDownload">
+                        <img src="../src/img/downloadGoogle.png" alt="Download on Google Play Image" class="downloadApp__downloadImg shakeOnClick">
+                        <img src="../src/img/downloadApple.png" alt="Download on Apple Image" class="downloadApp__downloadImg shakeOnClick">
                     </div>
                 </div>
                 <div class="downloadApp__imgBox">
@@ -529,15 +532,15 @@
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer" data-scroll-section>
             <div class="footer__container">
                 <h1 class="logo mb-small-5"><span>App</span>Lab</h1>
                 <ul class="footer__ul mb-small-5">
-                    <li class="footer__li"><a href="#home" class="footer__link">Home</a></li>
-                    <li class="footer__li"><a href="#" class="footer__link">Key Features</a></li>
-                    <li class="footer__li"><a href="#pricing" class="footer__link">Pricing</a></li>
-                    <li class="footer__li"><a href="#" class="footer__link">Testimonial</a></li>
-                    <li class="footer__li"><a href="#faq" class="footer__link">FAQ</a></li>
+                    <li class="footer__li"><a href="#" id="toHomeFoo" class="footer__link">Home</a></li>
+                    <li class="footer__li"><a href="#" id="toFeaturesFoo" class="footer__link">Key Features</a></li>
+                    <li class="footer__li"><a href="#" id="toPricingFoo" class="footer__link">Pricing</a></li>
+                    <li class="footer__li"><a href="#" id="toTestiFoo" class="footer__link">Testimonial</a></li>
+                    <li class="footer__li"><a href="#" id="toFaqFoo" class="footer__link">FAQ</a></li>
                 </ul>
                 <ul class="footer__socials mb-large-10">
                     <li class="footer__li"><a href="https://twitter.com/Samii_Dev"><i class="ri-twitter-fill"></i></a></li>
@@ -547,21 +550,7 @@
             </div>
         </footer>
     </div>
-    
-<script>
-        
-        document.querySelector('.faq__content').addEventListener('click', (e) => {
-            if (e.target.closest('.faq__card')){
-                Array.from(document.querySelector('.faq__content').children).forEach(el=>{
-                    el.classList.remove('activeFAQ')
-                    el.style.paddingBottom = `0`
-                })
-                e.target.closest('.faq__card').classList.add('activeFAQ')
-                document.querySelector('.activeFAQ').style.paddingBottom = `${document.querySelector('.activeFAQ').children[1].children[0].offsetHeight + 120}px`
-            }
-            console.log(document.querySelector('.activeFAQ').children[1].children[0].offsetHeight)
-        })
 
-</script>  
+<script type="module" src="../dist/js/bundle.js"></script>  
 </body>
 </html>

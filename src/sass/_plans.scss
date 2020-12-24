@@ -2,9 +2,14 @@
     grid-column: 1/-1;
     grid-row: 8/9;
 
+    @media only screen and  (max-width: $bp-small) {
+        grid-column: 2/10;
+    }
+
+
     display: grid;
     grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
-    padding: 15em 0;
+    padding: 8em 0;
     position: relative;
     overflow-x: hidden;
 
@@ -22,6 +27,11 @@
 
     &__container{
         grid-column: 2/14;
+
+        @media only screen and  (max-width: $bp-small) {
+            grid-column: 1/-1;
+        }
+
     }
 
 
@@ -29,12 +39,12 @@
         text-align: center;
 
         .heading-2{
-            width: 17em;
+            max-width: 17em;
             margin: 0 auto;
         }
 
         .paragraph{
-            width: 40em;
+            max-width: 40em;
             margin: 0 auto;
         }
     }
@@ -42,13 +52,15 @@
     &__switchBox{
         text-align: center;
 
+
         .plans__switch{
             display: inline-block;
             border: solid 2px #ebebeb;
             border-radius: 50px;
             padding: 5px;
-
+            
             p{
+                cursor: pointer;
                 display: inline-block;
                 padding: 1.7rem 4.5rem;
                 font-weight: 600;
@@ -63,20 +75,30 @@
     }
 
     &__cardBox{
+        perspective: 2000px;
         display: flex;
         justify-content: center;
+
         
         .plans__card{
             display: block;
             text-align: center;
             border-radius: 9px;
             border: solid 2px #ebebeb;
-
+            
             &:not(:last-child){
                 margin-right: 5em;
-            }
 
+                @media only screen and  (max-width: $bp-medium) {
+                    margin-right: 0;
+                    margin-bottom: 10em;
+            
+                }
+        
+            }
+            
             &--important{
+                transform-style: preserve-3d;
                 box-shadow: .5em 10em 6.2em 0px rgba(144, 163, 177, 0.18);
                 align-self: flex-start;
                 border: initial;
@@ -101,23 +123,27 @@
                 font-weight: 600;
                 margin-bottom: .1em;
                 vertical-align: center;
+                transition: all .75s ease-out;
             }
             
             &--date{
                 font-size: 2.4rem;
                 color: $color-grey-dark-3;
+                transition: all .75s ease-out;
             }
 
             &--mainText{
                 font-size: 2.6rem;
                 font-weight: 600;
                 color: $color-grey-dark-1;
+                transition: all .75s ease-out;
             }
 
             &--subText{
                 font-size: 2.2rem;
                 font-weight: 500;
                 color: $color-grey-dark-3;
+                transition: all .75s ease-out;
             }
 
             &--features{
@@ -125,6 +151,7 @@
                 font-size: 2.2rem;
                 color: $color-grey-dark-3;
                 padding-bottom: 1em;
+                transition: all .75s ease-out;
 
                 li{
                     margin-bottom: 1em;
@@ -140,5 +167,15 @@
                 margin-top: 1.5em;
             }
         }
+
+        @media only screen and  (max-width: $bp-medium) {
+            flex-direction: column;
+
+            .plans__card{
+                align-self: center;
+            }
+    
+        }
+
     }
 }

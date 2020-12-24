@@ -2,8 +2,13 @@
     grid-column: 2/-1;
     grid-row: 7/8;
 
+    @media only screen and  (max-width: $bp-small) {
+        grid-column: 2/10;
+    }
+
     display: grid;
     grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+    padding: 8em 0;
 
 
     &__container{
@@ -11,8 +16,12 @@
         background-image: url('../img/ultimateFeaturesBackground.png');
         background-position: right;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 70em 83em;
         display: flex;
+
+        @media only screen and  (max-width: $bp-small) {
+            background-image: none;
+        }
 
         i{
             font-size: 6rem;
@@ -27,6 +36,11 @@
     &__text{
         max-width: 70%;
         width: 100%;
+
+        @media only screen and  (max-width: $bp-large) {
+            max-width: 100%;
+        }
+
     }
 
     &__textBox{
@@ -39,6 +53,15 @@
         grid-gap: 5rem;
         gap: 5rem;
 
+        @media only screen and  (max-width: $bp-small) {
+            text-align: center;
+
+            .icon--box{
+                margin: 0 auto;
+            }
+        }
+
+
     }
 
     &__imgBox{
@@ -48,21 +71,40 @@
         // background-position: top;
         // background-repeat: no-repeat;
         // background-size: contain;
+        overflow: hidden;
+
+        img{
+            max-width: 100%;
+        }
+
+        @media only screen and  (max-width: $bp-large) {
+            display: none;
+        }
+
     }
 
     .img--front{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 0;
+        right: -10em;
         z-index: 99999;
     }
 
     .img--back{
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        right: 20em;
+        transform-origin: bottom;
+        transform: translateY(-50%) rotate(15deg);
+        right: 5em;
+        transition: transform 1s cubic-bezier(.6,.01,0,1.61);
+    }
+
+    @media only screen and  (max-width: $bp-small) {
+        .btn{
+            text-align: center;
+            width: 100%;
+        }
     }
 
 }

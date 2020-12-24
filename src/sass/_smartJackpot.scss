@@ -2,16 +2,27 @@
     grid-column: 2/10;
     grid-row: 4/5;
 
-    padding: 15em 0;
+    padding: 8em 0;
 
     &__textContainer{
         display: flex;
+
+        @media only screen and  (max-width: $bp-large) {
+            display: block;
     }
+}
 
     &__mainText{
         max-width: 55em;
         position: relative;
 
+        @media only screen and  (max-width: $bp-large) {
+            text-align: center;
+            max-width: 90em;
+            margin: 0 auto;
+            margin-bottom: 3em;
+        }
+    
         &::after{
             content: '';
             display: inline-block;
@@ -21,21 +32,52 @@
             top: 0;
             right: -10em;
             background-color: #b9b9b8;
+
+            @media only screen and  (max-width: $bp-large) {
+                display: none;
+            }
+        
+    
         }
     }
 
     &__subText{
         align-self: center;
+
+        @media only screen and  (max-width: $bp-large) {
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+
     }
 
     &__contentContainer{
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+        grid-gap: 5rem;
+        gap: 5rem;
+
+        @media only screen and  (max-width: $bp-small) {
+            text-align: center;
+            justify-items: center;
+
+            .smartJackpot__card{
+                margin-right: 0;
+            }
+        }
+
     }
 
     &__icon--box{
-        max-width: 80px;
+        max-width: 8em;
         margin-bottom: 2rem;
+
+        @media only screen and  (max-width: $bp-small) {
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+
     }
 
     .heading-3{

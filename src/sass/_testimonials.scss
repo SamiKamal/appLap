@@ -2,14 +2,40 @@
     grid-column: 1/-1;
     grid-row: 9/10;
 
+    @media only screen and  (max-width: $bp-medium) {
+        grid-column: 2/14;
+    }
+
+    @media only screen and  (max-width: $bp-small) {
+        grid-column: 2/10;
+    }
+
     display: grid;
     grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+    padding: 8em 0;
 
     &__container{
         grid-column: 1/14;
         display: flex;
         justify-content: center;
         align-content: center;
+
+        @media only screen and  (max-width: $bp-small) {
+            grid-column: 1/-1;
+        }
+
+    }
+
+    &__imgBox{
+        align-self: center;
+        img{
+            max-width: 100%;
+        }
+
+        @media only screen and  (max-width: $bp-large) {
+            display: none;    
+        }
+
     }
 
     &__text{
@@ -30,7 +56,7 @@
 
     &__quoteBox{
         .paragraph{
-            width: 35em;
+            max-width: 35em;
         }
 
         .testimonials__person{

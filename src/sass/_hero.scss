@@ -5,11 +5,13 @@
 
     display: grid;
     grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+    overflow: hidden;
 
-    background-image:  url('../img/backroundParticles\ 2.png'), url('../img/backgroundParticles.png'), url('../img/backgroundImage.png');
+    background-image:   url('../img/backgroundParticles.png'), url('../img/backgroundImage.png');
     background-repeat: no-repeat;
-    background-position: center, bottom, bottom;
-    background-size: 1600px 1079px, cover, contain;
+    background-position:  bottom, bottom;
+    background-size:  cover, contain;
+
 
     &__container{
         // padding: 0 25rem;
@@ -25,6 +27,7 @@
 
         .nav__li{
             display: inline-block;
+            vertical-align: middle;
         }
 
         .nav__link{
@@ -45,16 +48,33 @@
 
         &--text{
             align-self: center;
+
+            @media only screen and (max-width: $bp-largest){
+                margin-top: 20em;
+                padding-bottom: 5em;
+            }
+    
+            
         }
 
         .heading-1{
             max-width: 12em;
         }
         .heading-4{
-            width: 30em;
+            max-width: 30em;
         }
 
-        
+        &--imgBox{
+
+            img{
+                max-width: 100%;
+            }
+            @media only screen and (max-width: $bp-largest){
+                img{
+                    display: none;
+                }
+            }
+        }
     }
 
     &--badge{
@@ -73,6 +93,7 @@
             background-color: $color-secondary-2;
 
             i{
+                color: white;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -93,4 +114,21 @@
         }
     }
     
+    .parllaxBackgroundImage{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: -10em;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    .highlight{
+        @media only screen and  (max-width: $bp-small) {
+            display: block;
+            margin-left: .5em;
+            margin-top: 1.5em;
+        }
+
+    }
 }

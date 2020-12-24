@@ -1,8 +1,13 @@
 .whyOurApp{
     grid-column: 1/-1;
     grid-row: 6/7;
-    padding: 15rem 0;
+    padding: 8em 0;
+    padding-top: 15em;
     position: relative;
+
+    @media only screen and  (max-width: $bp-small) {
+        grid-column: 2/10;
+    }
 
     display: grid;
     grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
@@ -28,6 +33,11 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
+
+        @media only screen and  (max-width: $bp-small) {
+            grid-column: 1/-1;
+        }
+    
     }
 
     &__text{
@@ -43,15 +53,21 @@
 
     .paragraph{
         margin: 0 auto;
-        width: 90rem;
+        max-width: 90rem;
     }
 
     &__content{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        justify-items: center;
         // grid-template-rows: 1fr 1fr;
         grid-gap: 8rem;
         gap: 8rem;
+
+        @media only screen and  (max-width: $bp-small) {
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
+
     }
 
     &__card{
