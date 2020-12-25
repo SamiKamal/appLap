@@ -34,6 +34,16 @@
             font-size: 2.2rem;
             color: white;
             text-decoration: none;
+            
+            
+        }
+    }
+    
+    &__link{
+        border-bottom: 2px solid transparent;
+        transition: border .5s;
+        &:hover{
+            border-bottom: 2px solid white;
         }
     }
 

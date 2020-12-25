@@ -69,13 +69,13 @@ body {
 
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0); }
+    transform: translateX(-1px); }
   20%, 80% {
-    transform: translate3d(2px, 0, 0); }
+    transform: translateX(2px); }
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0); }
+    transform: translateX(-4px); }
   40%, 60% {
-    transform: translate3d(4px, 0, 0); } }
+    transform: translateX(4px); } }
 
 .errorShake {
   animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
@@ -401,6 +401,11 @@ body {
       font-size: 2.2rem;
       color: white;
       text-decoration: none; }
+  .footer__link {
+    border-bottom: 2px solid transparent;
+    transition: border .5s; }
+    .footer__link:hover {
+      border-bottom: 2px solid white; }
   .footer__socials i {
     font-size: 4rem;
     color: #273043;
@@ -427,24 +432,57 @@ body {
   background-image: url("../img/backgroundParticles.png"), url("../img/backgroundImage.png");
   background-repeat: no-repeat;
   background-position: bottom, bottom;
-  background-size: cover, contain; }
+  background-size: cover, contain;
+  position: relative; }
   .hero__container {
     grid-column: 2/14; }
+  .hero .box, .hero .iconMenu {
+    display: none; }
   .hero__nav {
     display: flex;
     justify-content: space-between; }
     .hero__nav .nav__ul {
       list-style-type: none; }
+      @media only screen and (max-width: 62.5em) {
+        .hero__nav .nav__ul {
+          background-color: #fff;
+          width: 100%;
+          height: 100%;
+          padding: 10em;
+          padding-top: 20em;
+          justify-items: center;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(100%, -50%);
+          z-index: 1;
+          transition: transform 1s cubic-bezier(0.53, -0.25, 0.19, 1.31); } }
     .hero__nav .nav__li {
       display: inline-block;
       vertical-align: middle; }
+      @media only screen and (max-width: 62.5em) {
+        .hero__nav .nav__li {
+          display: block;
+          text-align: center; }
+          .hero__nav .nav__li .btn {
+            display: none; } }
     .hero__nav .nav__link {
       font-size: 2.2rem;
       font-weight: 500;
       color: #242f51;
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border .5s; }
       .hero__nav .nav__link {
         margin-right: 1.5em; }
+        @media only screen and (max-width: 62.5em) {
+          .hero__nav .nav__link {
+            display: inline-block;
+            margin-right: 0;
+            margin-bottom: 10vh; } }
+      .hero__nav .nav__link:hover {
+        border-bottom: 2px solid #242f51; }
   .hero__content {
     display: flex;
     justify-content: space-between; }
@@ -458,11 +496,13 @@ body {
       max-width: 12em; }
     .hero__content .heading-4 {
       max-width: 30em; }
-    .hero__content--imgBox img {
-      max-width: 100%; }
-    @media only screen and (max-width: 87.5em) {
+    .hero__content--imgBox {
+      will-change: transform; }
       .hero__content--imgBox img {
-        display: none; } }
+        max-width: 100%; }
+      @media only screen and (max-width: 87.5em) {
+        .hero__content--imgBox img {
+          display: none; } }
   .hero--badge {
     display: flex;
     align-items: center;
@@ -492,18 +532,39 @@ body {
       padding-left: 2.4em;
       margin-left: -2em;
       border-radius: 50px; }
+      @media only screen and (max-width: 400px) {
+        .hero--badge-text {
+          font-size: 1.8rem; } }
   .hero .parllaxBackgroundImage {
     display: block;
     position: absolute;
     width: 100%;
     top: -10em;
     object-fit: cover;
-    pointer-events: none; }
+    pointer-events: none;
+    will-change: transform; }
   @media only screen and (max-width: 37.5em) {
     .hero .highlight {
       display: block;
       margin-left: .5em;
       margin-top: 1.5em; } }
+  @media only screen and (max-width: 62.5em) {
+    .hero .box {
+      display: inline-block;
+      width: 65px;
+      height: 65px;
+      top: -10rem;
+      z-index: 2; }
+    .hero .iconMenu {
+      display: block;
+      stroke: black;
+      position: relative;
+      top: -1.4rem;
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      cursor: pointer; } }
 
 .plans {
   grid-column: 1/-1;
@@ -549,9 +610,12 @@ body {
       .plans__switchBox .plans__switch p {
         cursor: pointer;
         display: inline-block;
-        padding: 1.7rem 4.5rem;
+        padding: 0.772em 2.045em;
         font-weight: 600;
         border-radius: 50px; }
+        @media only screen and (max-width: 400px) {
+          .plans__switchBox .plans__switch p {
+            font-size: 2rem; } }
       .plans__switchBox .plans__switch .active {
         background-color: #2500f9;
         color: white; }
@@ -721,6 +785,9 @@ body {
   .testimonials__quoteBox .testimonials__personBox {
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 37.5em) {
+      .testimonials__quoteBox .testimonials__personBox {
+        flex-direction: column; } }
   .testimonials__quoteBox .testimonials__personInfo {
     display: flex; }
   .testimonials__quoteBox .testimonials__personText {
@@ -735,6 +802,9 @@ body {
   .testimonials__arrowsBox {
     align-self: center;
     position: relative; }
+    @media only screen and (max-width: 62.5em) {
+      .testimonials__arrowsBox {
+        margin-top: 3em; } }
     .testimonials__arrowsBox i {
       font-size: 3rem;
       color: #2500f9;

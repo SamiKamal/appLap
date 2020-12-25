@@ -64,6 +64,11 @@
             &Box{
                 display: flex;
                 justify-content: space-between;
+
+                @media only screen and  (max-width: $bp-small) {
+                    flex-direction: column;
+                }
+    
             }
 
             &Info{
@@ -92,6 +97,11 @@
     &__arrowsBox{
         align-self: center;
         position: relative;
+
+        @media only screen and  (max-width: $bp-large) {
+            margin-top: 3em;
+        }
+
         
 
 
