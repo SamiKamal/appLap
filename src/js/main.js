@@ -1,38 +1,31 @@
-import LocomotiveScroll from 'locomotive-scroll';
+const rellax = require('rellax')
 const imgBack = document.querySelector('.img--back')
+const onView = document.querySelector('.onView')
 const downloadImg = document.querySelectorAll('.downloadApp__downloadImg')
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    smartphone: {
-        smooth: true
-    }
+
+var rellaxx = new rellax('.rellax', {
+    round: true
 });
 
 
-document.getElementById('toHome').addEventListener('click', e => scroll.scrollTo(document.getElementById('home')))
-document.getElementById('toFeatures').addEventListener('click', e => scroll.scrollTo(document.getElementById('features')) )
-document.getElementById('toPricing').addEventListener('click', e => scroll.scrollTo(document.getElementById('pricing')) )
-document.getElementById('toTesti').addEventListener('click', e => scroll.scrollTo(document.getElementById('testimonial')) )
-document.getElementById('toFaq').addEventListener('click', e => scroll.scrollTo(document.getElementById('faq')) )
-
-document.getElementById('toHomeFoo').addEventListener('click', e => scroll.scrollTo(document.getElementById('home')))
-document.getElementById('toFeaturesFoo').addEventListener('click', e => scroll.scrollTo(document.getElementById('features')) )
-document.getElementById('toPricingFoo').addEventListener('click', e => scroll.scrollTo(document.getElementById('pricing')) )
-document.getElementById('toTestiFoo').addEventListener('click', e => scroll.scrollTo(document.getElementById('testimonial')) )
-document.getElementById('toFaqFoo').addEventListener('click', e => scroll.scrollTo(document.getElementById('faq')) )
-
-
-scroll.on('call', func => {
-    // Using modularJS
-    if (func === 'imgBack'){
+window.addEventListener('scroll', e => {
+      if (isInViewport(onView)) {
         imgBack.style.transform = 'translateY(-50%) rotate(0deg)'
-        console.log('hey')
-    } else if (func === 'popUpDownload'){
-        downloadImg.forEach(el => el.style.animationPlayState = 'running')
-    }
-});
+      } else {
+        imgBack.style.transform = 'translateY(-50%) rotate(15deg)'
+      }
+
+  })
+
+// scroll.on('call', func => {
+//     // Using modularJS
+//     if (func === 'imgBack'){
+//         imgBack.style.transform = 'translateY(-50%) rotate(0deg)'
+//     } else if (func === 'popUpDownload'){
+//         downloadImg.forEach(el => el.style.animationPlayState = 'running')
+//     }
+// });
 
 document.querySelector('.activeFAQ').style.paddingBottom = `${document.querySelector('.activeFAQ').children[1].children[0].offsetHeight + 120}px`
 document.querySelectorAll('.faq__card').forEach(el => {
@@ -282,3 +275,47 @@ function responsiveMenuIn() {
 function responsiveMenuOut() {
     navList.style.transform = 'translate(100%,-50%)'
 }
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          };
+        });
+      }
+    }
+  });

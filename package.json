@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/SamiKamal/appLap#readme",
   "dependencies": {
-    "locomotive-scroll": "^4.0.6"
+    "locomotive-scroll": "^4.0.6",
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
     "concat": "^1.0.3",
