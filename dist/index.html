@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+    <link rel="manifest" href="./img/icon/site.webmanifest">
+    <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../src/css/locomotive-scroll.css">
     <link rel="stylesheet" href="../src/css/style.css">
+    
 </head>
 <body>
     <div class="container" data-scroll-container>
         <header class="hero" data-scroll-section id="home">
-            <!-- <img src="../src/img/backroundParticles 2.png" alt="" class="parllaxBackgroundImage" data-scroll data-scroll-speed="1">
-            <img src="../src/img/backgroundParticles.png" alt="" class="parllaxBackgroundImage" data-scroll data-scroll-speed="7"> -->
+            <img src="./img/backroundParticles 2.png" alt="" class="parllaxBackgroundImage rellax" data-rellax-speed="2" data-rellax-percentage=".5" data-scroll data-scroll-speed="1">
+            <img src="./img/backgroundParticles.png" alt="" class="parllaxBackgroundImage rellax" data-rellax-speed="4" data-rellax-percentage=".5" data-scroll data-scroll-speed="7">
             <div class="hero__container">
                 <nav class="hero__nav mt-large-10">
                     <h1 class="logo"><span>App</span>Lab</h1>
@@ -21,7 +29,7 @@
                         <li class="nav__li"><a href="#pricing" class="nav__link">Pricing</a></li>
                         <li class="nav__li"><a href="#testimonial" class="nav__link">Testimonials</a></li>
                         <li class="nav__li"><a href="#faq" class="nav__link">FAQ</a></li>
-                        <li class="nav__li"><a href="#" class="nav__btn btn btn-fill shakeOnClick">Try for free</a></li>
+                        <li class="nav__li"><a class="nav__btn btn btn-fill shakeOnClick">Try for free</a></li>
                     </ul>
                     <div id="b1" class="box">
                         <svg id="i1" class="iconMenu" viewBox="0 0 100 100">
@@ -45,12 +53,12 @@
                             managing your personal budgets.
                         </h4>
                         <div class="hero__content--btnBox mt-small-5">
-                            <a href="#" class="btn btn-fill shakeOnClick">Try for free</a>
-                            <a href="#" class="highlight ml-small-5 shakeOnClick">Watch demo video</a>
+                            <a class="btn btn-fill shakeOnClick">Try for free</a>
+                            <a class="highlight ml-small-5 shakeOnClick">Watch demo video</a>
                         </div>
                     </div>
                     <div class="hero__content--imgBox rellax" data-rellax-speed="4">
-                        <img class="hero__content--img" src="../src/img/phoneImage.png" alt="">
+                        <img class="hero__content--img" src="./img/phoneImage.png" alt="">
                     </div>
                 </div>
 
@@ -61,11 +69,11 @@
             <div class="trustedBy__container">
                 <p class="paragraph">Trusted by companies like</p>
                 <div class="trustedBy__imgBox mt-small-3">
-                    <img src="../src/img/company 1.png" alt="" class="trsutedBy__img">
-                    <img src="../src/img/company 2.png" alt="" class="trsutedBy__img">
-                    <img src="../src/img/company 3.png" alt="" class="trsutedBy__img">
-                    <img src="../src/img/company 4.png" alt="" class="trsutedBy__img">
-                    <img src="../src/img/company 5.png" alt="" class="trsutedBy__img">
+                    <img src="./img/company 1.png" alt="" class="trsutedBy__img">
+                    <img src="./img/company 2.png" alt="" class="trsutedBy__img">
+                    <img src="./img/company 3.png" alt="" class="trsutedBy__img">
+                    <img src="./img/company 4.png" alt="" class="trsutedBy__img">
+                    <img src="./img/company 5.png" alt="" class="trsutedBy__img">
                 </div>
             </div>
         </div>
@@ -73,7 +81,7 @@
         <div class="features" id="features" data-scroll-section>
             <div class="features__container">
                 <div class="features__imgBox rellax" data-rellax-percentage=".5" data-rellax-speed="4">
-                    <img src="../src/img/phoneFeatures.png" alt="Phone with text in it" class="features__img">
+                    <img src="./img/phoneFeatures.png" alt="Phone with text in it" class="features__img">
                 </div>
                 <div class="features__box pl-large-10">
                     <div class="features__box--text">
@@ -83,7 +91,7 @@
                     </div>
                     <div class="features__box--content mt-small-5">
                         <div class="features__card mb-small-5">
-                            <div class="features__icon--box mr-small-3 pinkBackground icon--box rellax rellax" data-rellax-speed=".4" data-rellax-percentage=".5">
+                            <div class="features__icon--box mr-small-3 pinkBackground icon--box rellax" data-rellax-speed=".4" data-rellax-percentage=".5">
                                 <!-- <img src="https://s.svgbox.net/materialui.svg?ic=speed&fill=f55767" alt="speedometer icon" class="features__icon icon"> -->
                                 <i class="ri-speed-line pinkColor"></i>
                             </div>
@@ -191,7 +199,7 @@
         <div class="designedBy rellax" data-rellax-percentage=".5" data-rellax-speed="4">
             <div class="designedBy__container">
                 <div class="designedBy__img--box mr-large-10">
-                    <img src="../src/img/desginedByBackground.png" alt="Man sitting on a computer" class="designedBy__img" >
+                    <img src="./img/desginedByBackground.png" alt="Man sitting on a computer" class="designedBy__img" >
                 </div>
                 <div class="designedBy__text--box ml-small-3">
                     <h2 class="heading-2 mb-small-3">Designed & built by
@@ -200,7 +208,7 @@
                         <p class="paragraph mb-small-5">The rise of mobile devices transforms the way we
                             consume information entirely and the world's most
                             elevant channels such as Facebook.</p>
-                        <a href="#" class="btn btn-fill shakeOnClick">Learn more</a>
+                        <a class="btn btn-fill shakeOnClick">Learn more</a>
                 </div>
             </div>
         </div>
@@ -355,11 +363,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-fill mt-small-5 shakeOnClick">See all</a>
+                    <a class="btn btn-fill mt-small-5 shakeOnClick">See all</a>
                 </div>
                 <div class="ultimateFeatures__imgBox">
-                    <img src="../src/img/ultimateFeaturesPhone1.png" alt="" class="ultimateFeatures__img img--front">
-                    <img src="../src/img/ultimateFeaturesPhone2.png" alt="" class="ultimateFeatures__img img--back" data-scroll data-scroll-call="imgBack">
+                    <img src="./img/ultimateFeaturesPhone1.png" alt="" class="ultimateFeatures__img img--front">
+                    <img src="./img/ultimateFeaturesPhone2.png" alt="" class="ultimateFeatures__img img--back" data-scroll data-scroll-call="imgBack">
                 </div>
             </div>
         </div>
@@ -398,7 +406,7 @@
                                         <li>eCommerce Store</li>
                                     </ul>
                                 </div>
-                                <a href="#" class="btn btn-fill shakeOnClick" id="plans__card--button">Start free trail</a>
+                                <a class="btn btn-fill shakeOnClick" id="plans__card--button">Start free trail</a>
                             </div>
                         </div>
 
@@ -417,8 +425,8 @@
                                         <li>eCommerce Store</li>
                                     </ul>
                                 </div>
-                                <a href="#" class="btn btn-fill shakeOnClick">Subscribe Now</a>
-                                <a href="#" class="highlight shakeOnClick">Or Start 14 days trail</a>
+                                <a class="btn btn-fill shakeOnClick">Subscribe Now</a>
+                                <a class="highlight shakeOnClick">Or Start 14 days trail</a>
                             </div>
                         </div>
                     </div>
@@ -428,7 +436,7 @@
 
         <div class="testimonials mt-large-10" id="testimonial" >
             <div class="testimonials__container">
-                <div class="testimonials__imgBox rellax" data-rellax-percentage=".5" data-rellax-speed="1"><img src="../src/img/testiBackground.png" alt=""></div>
+                <div class="testimonials__imgBox rellax" data-rellax-percentage=".5" data-rellax-speed="1"><img src="./img/testiBackground.png" alt=""></div>
                 <div class="testimonials__content">
                     <div class="testimonials__text">
                         <h2 class="heading-2 mb-small-3">Meet Client Satisfaction by using product</h2>
@@ -450,7 +458,7 @@
                         <div class="testimonials__personBox mt-small-5">
                             <div class="testimonials__personInfo">
                                 <div class="testimonails__personImgBox">
-                                    <img src="../src/img/testiPerson.png" alt="Person">
+                                    <img src="./img/testiPerson.png" alt="Person">
                                 </div>
                                 <div class="testimonials__personText ml-small-3">
                                     <p class="testimonials__personName">Zaltan Nemeth</p>
@@ -528,12 +536,12 @@
                     <p class="paragraph">The rise of mobile devices transforms the way we consume information entirely
                         and the world's most elevant channels such as Facebook.</p>
                     <div class="downloadApp__downloadImgBox mt-small-5 shakeOnClick" data-scroll data-scroll-call="popUpDownload">
-                        <img src="../src/img/downloadGoogle.png" alt="Download on Google Play Image" class="downloadApp__downloadImg shakeOnClick">
-                        <img src="../src/img/downloadApple.png" alt="Download on Apple Image" class="downloadApp__downloadImg shakeOnClick">
+                        <img src="./img/downloadGoogle.png" alt="Download on Google Play Image" class="downloadApp__downloadImg shakeOnClick">
+                        <img src="./img/downloadApple.png" alt="Download on Apple Image" class="downloadApp__downloadImg shakeOnClick">
                     </div>
                 </div>
                 <div class="downloadApp__imgBox">
-                    <img src="../src/img/appBackground.png" alt="Person using phone">
+                    <img src="./img/appBackground.png" alt="Person using phone">
                 </div>
             </div>
         </div>
@@ -556,7 +564,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=%7Ehtml5-elements%2Cviewport%2CscrollY%2CscrollX%2Cscroll%2Cdocument.querySelector%2Cdocument%2CWebAnimations%2CElement.prototype.scroll%2CElement.prototype.closest%2CArray.prototype.forEach"></script>
     <script
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

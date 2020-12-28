@@ -26,6 +26,9 @@ body {
     .container {
       grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 1fr)) minmax(2rem, 1fr); } }
 
+a {
+  cursor: pointer; }
+
 .icon--box {
   align-self: center;
   border-radius: 50px;
@@ -538,8 +541,8 @@ body {
   .hero .parllaxBackgroundImage {
     display: block;
     position: absolute;
-    width: 100%;
-    top: -10em;
+    height: 100vh;
+    bottom: -15em;
     object-fit: cover;
     pointer-events: none;
     will-change: transform; }

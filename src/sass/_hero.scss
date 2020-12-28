@@ -170,8 +170,8 @@
     .parllaxBackgroundImage{
         display: block;
         position: absolute;
-        width: 100%;
-        top: -10em;
+        height: 100vh;
+        bottom: -15em;
         object-fit: cover;
         pointer-events: none;
         will-change: transform;
